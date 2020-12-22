@@ -18,23 +18,39 @@
 .grid-container > div {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
-    padding: 20px 0;
-    font-size: 30px;
   }
 
-.timer { grid-area: timer; }
-.title { grid-area: title; }
-.word { grid-area: word; }
-.chara { grid-area: chara; }
-.text { grid-area: text; }
+.timer { 
+    grid-area: timer; 
+    padding: 25px 0;
+}
+.title { 
+    grid-area: title;
+    padding: 25px 0; 
+}
+.word { 
+    grid-area: word; 
+}
+.chara { 
+    grid-area: chara; 
+}
+.text { 
+    grid-area: text; 
+    padding: 10px 0;
+}
 .goal { grid-area: goal; }
 .header { 
     grid-area: header;
     font-weight: bold;
+    padding: 20px 0;
 }
 .footer { 
     grid-area: footer;
     font-weight: lighter;
-    font-size: 750px;
+    font-size: 12px;
+}
+
+#goal {
+    padding: 5px;
 }
 
