@@ -38,7 +38,10 @@
     grid-area: text; 
     padding: 10px 0;
 }
-.goal { grid-area: goal; }
+.goal { 
+    grid-area: goal; 
+    padding: 25px 0;
+}
 .header { 
     grid-area: header;
     font-weight: bold;

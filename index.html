@@ -8,20 +8,39 @@
 
     <div class="grid-container">
         <div class="timer">Timer</div>
-        <div class="title">Title
-            <input type="text" id="titleName" name="title of passage">
+        <div class="title">
+            <div class="form" id="titleForm">
+                <label for="titleField">Enter Passage Title: </label>
+                <input type="text" id="titleField" class="titleField">
+                <input type="submit" value="Submit Title" class="titleSubmit">
+            </div>
+            <p id="newTitle"></p>
         </div>
+        
         <div class="word">Word   </div>  
         <div class="chara">Chara</div>
         <div class="text">
-            <textarea name="writing" rows="20" cols="60">Example Text Area</textarea>
+            <textarea name="writing" rows="50" cols="60"></textarea>
         </div>
-        <div class="goal">Goal
-            <input type="text" id="goal" name="goal">
+        <div class="Goal">
+            <div class="form" id="goalForm">
+                <label for="goalField">Goal: </label>
+                <input type="text" id="goalField" class="goalField">
+                <input type="submit" value="Submit" class="goalSubmit">
+            </div>
+            <p id="newGoal"></p>
         </div>
         <div class="header">Just Write It (Version 1)</div>
         <div class="footer">By fwang; Dec. 2020</div>
     </div>
+
+    <div class="result">
+        <p class="titleName"></p>
+        <p class="textResult"></p>
+        <p class="wordGoals"></p>
+      </div>
+
+    <script src="func.js"></script>
 
    
 </body>
