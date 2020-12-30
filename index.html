@@ -7,7 +7,11 @@
 <body>
 
     <div class="grid-container">
+
+        <!--Timer-->
         <div class="timer">Timer</div>
+
+        <!--Title Area-->
         <div class="title">
             <div class="form" id="titleForm">
                 <label for="titleField">Enter Passage Title: </label>
@@ -17,11 +21,26 @@
             <p id="newTitle"></p>
         </div>
         
-        <div class="word">Word   </div>  
-        <div class="chara">Chara</div>
-        <div class="text">
-            <textarea name="writing" rows="50" cols="60"></textarea>
+        <!--WordCount-->
+        <div class="word">Word Count  
+            <p id="wordCount"></p> 
+        </div> 
+        
+        <!--Character Count-->
+        <div class="chara">Char
+            <p id="charCount"></p> 
         </div>
+    
+        <!--Text Area-->
+        <div class="text">
+            <div class="textInfo" id="textInfo">
+                <textArea type="text" id="textField" class="textField" rows="40" cols="60"></textArea>
+                <button type="button" onclick="getCounts()">Count</button>
+            </div>
+            <p id="wordzzzz"></p>
+        </div>
+        
+        <!--Goal Area-->
         <div class="Goal">
             <div class="form" id="goalForm">
                 <label for="goalField">Goal: </label>
@@ -30,16 +49,11 @@
             </div>
             <p id="newGoal"></p>
         </div>
+
+        <!--Header & Footer Info-->
         <div class="header">Just Write It (Version 1)</div>
         <div class="footer">By fwang; Dec. 2020</div>
     </div>
-
-    <div class="result">
-        <p class="titleName"></p>
-        <p class="textResult"></p>
-        <p class="wordGoals"></p>
-      </div>
-
     <script src="func.js"></script>
 
    
