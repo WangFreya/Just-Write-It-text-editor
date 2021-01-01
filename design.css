@@ -22,30 +22,31 @@
 
 .timer { 
     grid-area: timer; 
-    padding: 25px 0;
+    
 }
 .title { 
-    grid-area: title;
-    padding: 25px 0; 
+    grid-area: title;   
+}
+.infoTitle {
+    font-size: 50px;
 }
 .word { 
     grid-area: word; 
+    font-size: 50px;
 }
 .chara { 
     grid-area: chara; 
+    font-size: 50px;
 }
 .text { 
     grid-area: text; 
-    padding: 10px 0;
 }
 .goal { 
     grid-area: goal; 
-    padding: 25px 0;
 }
 .header { 
     grid-area: header;
     font-weight: bold;
-    padding: 20px 0;
 }
 .footer { 
     grid-area: footer;
@@ -53,7 +54,19 @@
     font-size: 12px;
 }
 
-#goal {
-    padding: 5px;
+/*Stopwatch design taken from https://github.com/JamieMcGibbon/TechnicalCafe/blob/master/Misc%20Tutorials/Stopwatch%20Tutorial/index.html*/
+.timer{
+    height: 300px;
+    width: 100%;
 }
 
+#display{
+    width: 100%;
+    font-size: 72px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.buttons{
+    text-align: center;
+}

@@ -1,10 +1,6 @@
-/** 
- * as user types update wordcount
- * start timer when user types
- * let user hit pause on timer at any time + continue
- * let user export text as word doc or to drive
-*/
-//getTitle();
+//Initialized variables
+let goal;
+let allWords;
 
 //Title update
 const titleSubmit = document.querySelector('.titleSubmit');
@@ -23,32 +19,65 @@ const goalField = document.querySelector('.goalField');
 
 function getGoal() {
     let userGoal = goalField.value;
+    goal = userGoal;
     document.getElementById("goalForm").innerHTML = userGoal;
+}
+
+function checkGoal() {
+    if (goal == allWords) {
+        document.getElementById("achieveGoal").innerHTML = "You achieved your word count goal!";
+    }
 }
 
 goalSubmit.addEventListener('click', getGoal);
 
-//Text area
-/*
-Save info in textbox as string
-calculate wordcount
-update wordcount as words are types
-*/
+//Text area + Char/Word counts
+let noWord = 0;
+document.getElementById("wordCount").innerHTML = noWord;
+
+let noChar = 0;
+document.getElementById("charCount").innerHTML = noWord;
 
 function getCounts() {
     let str = document.getElementById("textField").value;
-    let wordCount = str.split(" ").length;
-    document.getElementById("wordCount").innerHTML = wordCount;
-
-    //let charCount = str.split().length;
+    let words = str.split(" ").length;
+    document.getElementById("wordCount").innerHTML = words;
+    allWords = words;
+    checkGoal();
+    
     let charCount = 0;
     for (let i = 0; i < str.length; i++) {
         if (str.charAt(i) != ' ') {
             charCount += 1;
         }
     }
+    charCount += 1;
     document.getElementById("charCount").innerHTML = charCount;
 }
+
+//Download File
+function downloadFile() {
+    let fileName = document.getElementById("newTitle").value;
+    let textToSave = document.getElementById("textField").value;
+    download(fileName, textToSave);
+}
+
+function download(filename, text) {
+    let element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+  
+    element.style.display = 'none';
+    document.body.appendChild(element);
+  
+    element.click();
+  
+    document.body.removeChild(element);
+  }
+
+
+
+
 
 
 
